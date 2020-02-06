@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "257266029988",
+    "firebase_url": "https://spamsms-285b6.firebaseio.com",
+    "project_id": "spamsms-285b6",
+    "storage_bucket": "spamsms-285b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257266029988:android:d43e1368627a3ca4739d31",
+        "android_client_info": {
+          "package_name": "com.example.spamsms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257266029988-t7rgodkmlp6uln2dp3faf46mhoa77ibv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.spamsms",
+            "certificate_hash": "27ba99c9409927fc7b1094a8edf76f838fd60573"
+          }
+        },
+        {
+          "client_id": "257266029988-is3ds05kb3vsamlfa7i1h3rkvu3dqopi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1f8UdUriJ5K_fpnXsXghLX52H2AzZT6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257266029988-is3ds05kb3vsamlfa7i1h3rkvu3dqopi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
