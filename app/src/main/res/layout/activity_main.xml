@@ -3,18 +3,75 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <data>
+        <variable
+            name="clicks"
+            type="com.example.spamsms.MainActivity.Clicks"/>
+    </data>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
 
-        <androidx.recyclerview.widget.RecyclerView
+        <!--        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        </androidx.recyclerview.widget.RecyclerView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.recyclerview.widget.RecyclerView>-->
+
+
+        <Button
+            android:id="@+id/btnIssueGadget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="237dp"
+            android:onClick="@{() -> clicks.gadgetIssue()}"
+            android:text="Gadadget Issue"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btnIssueData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> clicks.dataAnomalyissue()}"
+            android:text="Data Issue"
+            android:layout_below="@id/btnIssueGadget"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btnIssueBluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> clicks.bluetoothConnectivityIssue()}"
+            android:text="Bluetooth Issue"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/btnIssueData"/>
+
+        <Button
+            android:id="@+id/btnIssueNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Network Issue"
+            android:onClick="@{() -> clicks.networkConnectivityIssue()}"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/btnIssueBluetooth"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom Exception"
+            android:onClick="@{() -> clicks.nextScreen()}"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/btnIssueNetwork"/>
+
+    </RelativeLayout>
 
 </layout>
