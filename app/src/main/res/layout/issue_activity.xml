@@ -5,17 +5,51 @@
 
     <data>
         <variable
+            name="item"
+            type="com.example.spamsms.IssuesActivity.Item"/>
+
+        <variable
             name="clicks"
-            type="com.example.spamsms.IssuesActivity.Click"/>
+            type="com.example.spamsms.IssuesActivity.Clicks"/>
+
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".IssuesActivity">
 
 
+        <EditText
+            android:id="@+id/edtUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="User ID"
+            android:textAlignment="center"
+            app:userTextChangeListener="@{item.getUserTextWatcher}"
+            android:text="@={item.strUserId}"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/edtCustomError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/edtUser"
+            android:hint="add custom error message"
+            android:textAlignment="center"
+            app:textChangedListener="@{item.getTextWatcher}"
+            android:text="@={item.strError}"/>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_below="@id/edtCustomError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEND"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:onClick="@{() -> clicks.sendReport()}"/>
+    </RelativeLayout>
 
 </layout>

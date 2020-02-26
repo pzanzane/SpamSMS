@@ -24,6 +24,7 @@
         <activity android:name=".IssuesActivity">
         </activity>
 
+        <service android:name=".ServiceTrainSpam"/>
     </application>
 
 </manifest>
